@@ -34,10 +34,12 @@ Big thank you to pelya https://github.com/pelya/commandergenius
 Quick compilation guide for Debian/Ubuntu (Windows is not supported, MacOsX should be okay though):
 Install latest Android SDK, Android NDK r8b or newer, and "ant" tool (sudo apt-get install ant),
 then launch commands:
-    git submodule update --init --recursive project/jni/application/c-dogs/src
+
+    git submodule update --init --recursive project/jni/application/c-dogs/src    
     rm project/jni/application/src
     ln -s c-dogs project/jni/application/src
     ./build.sh
+    
 That should do it.
 
 Contact me (knepe) <kneppedyr@gmail.com>
