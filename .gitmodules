@@ -1,0 +1,3 @@
+[submodule "project/jni/application/c-dogs/src"]
+	path = project/jni/application/c-dogs/src
+	url = https://github.com/cxong/cdogs-sdl.git
