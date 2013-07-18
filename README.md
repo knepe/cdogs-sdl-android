@@ -40,6 +40,4 @@ then launch commands:
     ln -s c-dogs project/jni/application/src
     ./build.sh
     
-That should do it.
-
 Contact me (knepe) <kneppedyr@gmail.com>
