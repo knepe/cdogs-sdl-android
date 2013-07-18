@@ -1,0 +1,13 @@
+project/local.properties
+project/bin
+project/gen
+project/libs
+project/assets
+project/obj
+project/src
+project/res/values*
+project/AndroidManifest.xml
+project/jni/Settings.mk
+project/jni/application/*/libapplication*.so
+project/jni/application/src
+project/res/drawable-xhdpi/ouya_icon.png
