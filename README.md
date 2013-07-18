@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Android port of C-Dogs SDL
 ========================
 
@@ -30,3 +31,7 @@ Github: https://github.com/cxong/cdogs-sdl
 Big thank you to pelya https://github.com/pelya/commandergenius
 
 Contact me (knepe) <kneppedyr@gmail.com>
+=======
+cdogs-sdl-android
+=================
+>>>>>>> cb3af86283f0d7798cb1864d912060531919797f
