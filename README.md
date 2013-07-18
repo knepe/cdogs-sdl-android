@@ -16,8 +16,8 @@ Android port of C-Dogs SDL
      `---------------'               
 
 
-C-Dogs SDL is a classic overhead run-and-gun game, supporting up to two players
-in co-op and 1v1 modes. Customize your player, choose from up to 11 weapons,
+C-Dogs SDL is a classic overhead run-and-gun game. 
+Customize your player, choose from up to 11 weapons,
 and try the dozens of user-created campaigns. Have fun!
 
 For more information about the original C-Dogs read 'original\_readme.txt'.
