@@ -3,7 +3,7 @@
 
 install_apk=false
 run_apk=false
-sign_apk=false
+sign_apk=true
 build_release=true
 
 if [ "$#" -gt 0 -a "$1" = "-s" ]; then
@@ -86,7 +86,7 @@ cd project && env PATH=$NDKBUILDPATH BUILD_NUM_CPUS=$NCPU nice -n19 ndk-build -j
 	cd .. && ./copyAssets.sh && cd project && \
 	{	if $build_release ; then \
 			ant release || exit 1 ; \
-			jarsigner -verbose -keystore ~/.android/debug.keystore -storepass android -sigalg MD5withRSA -digestalg SHA1 bin/MainActivity-release-unsigned.apk androiddebugkey || exit 1 ; \
+			jarsigner -verbose -keystore ~/.android/release.keystore -storepass bias4270 -keypass bias4270 -sigalg MD5withRSA -digestalg SHA1 bin/MainActivity-release-unsigned.apk release || exit 1 ; \
 			zipalign 4 bin/MainActivity-release-unsigned.apk bin/MainActivity-debug.apk ; \
 		else \
 			ant debug ; \

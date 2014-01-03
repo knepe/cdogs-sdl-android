@@ -1,7 +1,7 @@
 #!/bin/sh
 # Set path to your Android keystore and your keystore alias here, or put them in your environment
-[ -z "$ANDROID_KEYSTORE_FILE" ] && ANDROID_KEYSTORE_FILE=~/.android/debug.keystore
-[ -z "$ANDROID_KEYSTORE_ALIAS" ] && ANDROID_KEYSTORE_ALIAS=androiddebugkey
+[ -z "$ANDROID_KEYSTORE_FILE" ] && ANDROID_KEYSTORE_FILE=~/.android/release.keystore
+[ -z "$ANDROID_KEYSTORE_ALIAS" ] && ANDROID_KEYSTORE_ALIAS=release
 
 APPNAME=`grep AppName AndroidAppSettings.cfg | sed 's/.*=//' | tr -d '"' | tr " '/" '---'`
 APPVER=`grep AppVersionName AndroidAppSettings.cfg | sed 's/.*=//' | tr -d '"' | tr " '/" '---'`
@@ -15,7 +15,7 @@ zip -d Signed.apk "META-INF/*"
 # Sign with the new certificate
 echo Using keystore $ANDROID_KEYSTORE_FILE and alias $ANDROID_KEYSTORE_ALIAS
 stty -echo
-jarsigner -verbose -keystore $ANDROID_KEYSTORE_FILE -sigalg MD5withRSA -digestalg SHA1 Signed.apk $ANDROID_KEYSTORE_ALIAS || exit 1
+jarsigner -verbose -keystore $ANDROID_KEYSTORE_FILE -sigalg MD5withRSA -digestalg SHA1 -storepass bias4270 -keypass bias4270 Signed.apk $ANDROID_KEYSTORE_ALIAS || exit 1
 stty echo
 echo
 zipalign 4 Signed.apk SignedAligned.apk

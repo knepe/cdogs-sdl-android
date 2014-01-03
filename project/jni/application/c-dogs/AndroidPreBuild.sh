@@ -6,7 +6,7 @@ echo "Patching..."
 echo "Archiving data"
 mkdir -p AndroidData
 cd src
-zip -r ../AndroidData/data.zip doc dogfights graphics missions music sounds >/dev/null
+zip -r ../AndroidData/data.zip doc dogfights graphics missions music sounds cdogs_icon.bmp >/dev/null
 
 exit 0
 
