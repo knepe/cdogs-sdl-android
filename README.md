@@ -38,12 +38,12 @@ then launch commands:
     git submodule update --init --recursive project/jni/application/c-dogs/src    
     rm project/jni/application/src
     ln -s c-dogs project/jni/application/src
---modify src abit--
-Rename src/cdogs/sys_config.h.cmake to sys_config.h and edit these lines:
-#define CDOGS_SDL_VERSION "v[version here]"
-#define CDOGS_DATA_DIR "/sdcard/Android/data/com.knepe.cdogs/files/"
-#define CDOGS_CFG_DIR ".cdogs/"
---end modify src--
+            --modify src abit--
+            Rename src/cdogs/sys_config.h.cmake to sys_config.h and edit these lines:
+            #define CDOGS_SDL_VERSION "v[version here]"
+            #define CDOGS_DATA_DIR "/sdcard/Android/data/com.knepe.cdogs/files/"
+            #define CDOGS_CFG_DIR ".cdogs/"
+            --end modify src--
     ./build.sh
     
 Contact me (knepe) <kneppedyr@gmail.com>
